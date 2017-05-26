@@ -8,8 +8,8 @@ module UrlShortener
         include Import['urls.services.shortify']
         include Matcher
 
-        def call(attributes)
-          validation = Validations::Form.(attributes)
+        def call(params)
+          validation = Validations::Form.(params)
 
           if validation.success?
             Dry::Monads::Right(shortify.(validation.output))

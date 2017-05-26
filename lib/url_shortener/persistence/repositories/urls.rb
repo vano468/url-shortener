@@ -6,8 +6,8 @@ module UrlShortener
       class Urls < UrlShortener::Repository[:urls]
         commands :create
 
-        def find(key)
-          urls.by_key(key).one
+        def find!(key)
+          urls.by_key(key).one!
         end
       end
     end
