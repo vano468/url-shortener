@@ -7,7 +7,7 @@ module UrlShortener
         include Import['persistence.repositories.urls']
 
         def call(input)
-          generate_key
+          urls.create(key: generate_key, url: input[:longUrl])
         end
 
         private
