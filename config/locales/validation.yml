@@ -1,0 +1,3 @@
+en:
+  errors:
+    uri?: 'is not a valid URI'
