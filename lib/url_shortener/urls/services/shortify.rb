@@ -2,12 +2,14 @@ module UrlShortener
   module Urls
     module Services
       class Shortify
-        KEY_LENGTH = 6
-
         include Import['persistence.repositories.urls']
+
+        KEY_LENGTH = 6
 
         def call(input)
           urls.create(key: generate_key, url: input[:longUrl])
+        rescue ROM::SQL::UniqueConstraintError
+          retry
         end
 
         private
