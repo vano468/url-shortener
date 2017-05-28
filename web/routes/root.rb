@@ -12,7 +12,7 @@ class UrlShortener::Application
     r.get :url do |key|
       r.resolve 'urls.operations.resolve' do |resolve|
         resolve.(key) do |m|
-          m.success { |v| r.redirect v.url }
+          m.success { |v| r.redirect v.url, 301 }
           m.failure { response.status = 404 }
         end
       end
