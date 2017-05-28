@@ -1,7 +1,9 @@
 development: &base
   database_url: 'mysql2://root@localhost/url_shortener_development'
+
 test:
   <<: *base
   database_url: 'mysql2://root@localhost/url_shortener_test'
+
 production:
   <<: *base

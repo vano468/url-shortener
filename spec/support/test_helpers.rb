@@ -6,7 +6,7 @@ module TestHelpers
   end
 
   def rom
-    UrlShortener::Container["persistence.rom"]
+    UrlShortener::Container['persistence.rom']
   end
 
   def db_connection
