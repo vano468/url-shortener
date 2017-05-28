@@ -5,7 +5,7 @@ gem 'rake'
 # Web framework
 gem 'dry-web', '>= 0.6.0'
 gem 'dry-web-roda', '>= 0.6.0'
-gem 'thin'
+gem 'puma'
 
 gem 'rack', '>= 2.0'
 gem 'shotgun', '>= 0.9.2'
