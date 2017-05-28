@@ -9,7 +9,7 @@ module UrlShortener
           config.messages_file = Container.root.join('config/locales/validation.yml')
 
           def uri?(input)
-            !URI.regexp.match(input).nil?
+            !URI.regexp(%w(http https)).match(input).nil?
           end
         end
 
