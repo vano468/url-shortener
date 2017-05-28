@@ -9,6 +9,10 @@ module TestHelpers
     UrlShortener::Container['persistence.rom']
   end
 
+  def urls_repo
+    UrlShortener::Container['persistence.repositories.urls']
+  end
+
   def db_connection
     rom.gateways[:default].connection
   end

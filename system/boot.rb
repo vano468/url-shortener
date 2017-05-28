@@ -1,5 +1,7 @@
-require 'byebug' if ENV['RACK_ENV'] == 'development'
-require 'pry' if ENV['RACK_ENV'] == 'development'
+if %w(development test).include?(ENV['RACK_ENV'])
+  require 'byebug'
+  require 'pry'
+end
 
 require_relative 'url_shortener/container'
 
