@@ -4,8 +4,6 @@ UrlShortener::Container.namespace 'persistence' do |persistence|
       require 'sequel'
       require 'rom'
 
-      use :monitor
-
       Sequel.database_timezone = :utc
       Sequel.application_timezone = :local
 
