@@ -1,3 +1,5 @@
+require 'securerandom'
+
 module UrlShortener
   module Urls
     module Services
